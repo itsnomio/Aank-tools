@@ -139,9 +139,18 @@ button {
 }
 
 footer {
-    background: #F9FAFB;
+    background: #ffffff;
     padding: 2rem;
-    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-logo {
+    font-size: 6rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    color: #333;
 }
 
 .footer-content {

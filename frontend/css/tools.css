@@ -1,5 +1,5 @@
- /* Base Reset */
- body, h1, h2, h3, p, ul, li, a, img {
+/* Base Reset */
+body, h1, h2, h3, p, ul, li, a, img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,6 +7,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header */
@@ -17,6 +19,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 header nav {
     display: flex;
@@ -27,14 +30,24 @@ header a {
     text-decoration: none;
     color: #e06c75;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+header a:hover {
+    color: #d05560;
 }
 
 /* Main Content */
 main {
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 section {
     margin-bottom: 2rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Tools Section */
@@ -42,13 +55,14 @@ section#tools {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    text-align: left;
 }
 section#tools img {
     max-width: 150px;
     border-radius: 5px;
 }
 section#tools div {
-    max-width: calc(100% - 150px);
+    flex-grow: 1;
 }
 section#tools h1 {
     font-size: 1.5rem;
@@ -66,6 +80,7 @@ section#tools button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 section#tools button:hover {
     background-color: #d05560;
@@ -92,6 +107,11 @@ section.locations li {
     border-radius: 10px;
     background-color: #f9f9f9;
     padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section.locations li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 section.locations img {
     width: 100%;
@@ -131,9 +151,19 @@ footer ul li {
 footer a {
     color: #333;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 footer a:hover {
+    color: #007BFF;
     text-decoration: underline;
+}
+
+.footer-logo{
+    font-size: 6rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    color: #333;
 }
 
 /* Responsive Design */
@@ -151,5 +181,17 @@ footer a:hover {
     }
     section#tools div {
         max-width: 100%;
+    }
+    section.locations ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    section.locations ul {
+        grid-template-columns: 1fr;
     }
 }
