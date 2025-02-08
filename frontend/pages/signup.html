@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aank Tools</title>
+    <link rel="stylesheet"href="../css/signup.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Aank tools</a>
+        <nav>
+            <a href="../pages/main.html">Цахилгаан багаж</a>
+            <a href="../pages/furniture.html">Тавилгын хэрэгсэл</a>
+            <a href="../pages/construction.html">Барилгын материал</a>
+            <a href="../pages/signup.html">Нэвтрэх</a>
+
+        <section class="icons">
+            <a href="#" aria-label="Cart"><img src="cart-icon.svg" alt="Cart"></a>
+            <a href="#" aria-label="Profile"><img src="profile-icon.svg" alt="Profile"></a>
+        </section>
+    </header>
+
+    <main>
+        <section class="register-section">
+            <img src="../pictures/sign up.jpg" alt="Collection of tools" class="tools-image">
+
+            <section class="register-form">
+                <h2>Бүртгүүлэх</h2>
+                <button class="google-btn">
+                    <img src="google-icon.svg" alt="Google">
+                    Google-ээр бүртгүүлэх
+                </button>
+                
+                <p class="or-divider">Or</p>
+                
+                <form id="registerForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <input type="text" placeholder="Enter your full name" required>
+                    <input type="password" placeholder="Create your password" required>
+                    <button type="submit">Нэвтрэх</button>
+                </form>
+            </section>
+        </section>
+
+        <section class="locations">
+            <h2>Худалдаалаж буй байршил</h2>
+            <section class="location-grid">
+                <article class="location-card">
+                    <img src="../pictures/location1.jpg" alt="Ikh Nayad Plaza">
+
+                    <section class="location-info">
+                        <h3>Ikh Nayad Plaza</h3>
+                        <p>Хаяг: Улаанбаатар хот, Сүхбаатар дүүрэг</p>
+                        <p>Салбар: TOWER-1, 2 давхар</p>
+                        <p>Ажиллах цаг: 08:00 - 21:00</p>
+                        <p>Утас: 7772-4422</p>
+                    </section>
+                </article>
+
+                <article class="location-card">
+                    <img src="../pictures/location2.jpg" alt="Uran Gan">
+                        <h3>Uran Gan</h3>
+                        <p>Хаяг: Улаанбаатар хот, Хан-Уул дүүрэг</p>
+                        <p>Салбар: VISTA хороолол</p>
+                        <p>Ажиллах цаг: 08:00 - 21:00</p>
+                        <p>Утас: 7772-4422</p>
+                    </section>
+                </article>
+
+                
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-content">
+            <section>
+                <h3>Aank tools</h3>
+            </section>
+            
+            <section>
+                <section class="footer-logo">Aank tools</section>
+                <nav class="footer-nav">
+                    <a href="../pages/main.html">Цахилгаан багаж</a>
+                    <a href="../pages/furniture.html">Тавилгын хэрэгсэл</a>
+                    <a href="../pages/construction.html">Барилгын тусгах материал</a>
+                </nav>
+            </section>
+
+            <section>
+                <h4>Холбоо барих</h4>
+                <p>Утас: 95533564</p>
+                <p>Email: Aanktool@email.com</p>
+                <section class="social-links">
+                    <a href="#"><img src="facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+                </section>
+            </section>
+        </section>
+    </footer>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your registration logic here
+        });
+
+        // Responsive menu toggle
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '☰';
+        menuToggle.style.display = 'none';
+        menuToggle.addEventListener('click', () => {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Add responsive menu for mobile
+        function checkScreenSize() {
+            const header = document.querySelector('header');
+            if (window.innerWidth <= 768) {
+                if (!header.contains(menuToggle)) {
+                    header.insertBefore(menuToggle, header.querySelector('nav'));
+                }
+                menuToggle.style.display = 'block';
+            } else {
+                menuToggle.style.display = 'none';
+                document.querySelector('nav').style.display = 'flex';
+            }
+        }
+
+        window.addEventListener('resize', checkScreenSize);
+        checkScreenSize();
+    </script>
+</body>
+</html>
