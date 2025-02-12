@@ -47,10 +47,8 @@
     <script>
         document.getElementById('registerForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Add your registration logic here
         });
 
-        // Responsive menu toggle
         const menuToggle = document.createElement('button');
         menuToggle.innerHTML = '☰';
         menuToggle.style.display = 'none';
@@ -59,7 +57,6 @@
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         });
 
-        // Add responsive menu for mobile
         function checkScreenSize() {
             const header = document.querySelector('header');
             if (window.innerWidth <= 768) {
