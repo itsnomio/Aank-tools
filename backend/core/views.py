@@ -4,6 +4,7 @@ from rest_framework import status
 from django.shortcuts import get_object_or_404
 from .models import Product
 from .serializer import ProductDetailSerializer
+from django.shortcuts import render
 
 class ProductDetailView(APIView):
     def get(self, request, pk):

@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
+    <script src="{% static 'home/AankTools.js' %}" defer></script>
+    <title>Aank Tools</title> 
+</head>
+<body>
+    <header>
+        <h1>Aank Tools</h1> 
+        <nav>
+            <a href="../pages/main.html">Цахилгаан багаж</a>
+            <a href="../pages/furniture.html">Тавилгын хэрэгсэл</a>
+            <a href="../pages/construction.html">Барилгын материал</a>
+            <a href="../pages/signup.html">Нэвтрэх</a>
+        </nav>
+    </header> 
+    <main>
+        <section>
+            <img src="../pictures/power tool background.jpg" alt="Banner showing tools">
+        </section>
+
+        <section>
+            <h2>Цахилгаан багаж</h2>
+            <article>
+                <aank-tools></aank-tools>
+                <figure class="button-figure">
+                    <img src="../pictures/1982.png" alt="Tool 1">
+                    <figcaption>Цахилгаан харуул<br>69,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/2326.png" alt="Tool 2">
+                    <figcaption>Цохилттой мулдок хослосон дрилл<br>149,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/2326G.png" alt="Tool 3">
+                    <figcaption>Цохилттой мулдок хослосон дрилл<br>139,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/2526GER.png" alt="Tool 4">
+                    <figcaption>Цохилттой гар дрилл<br>65,000 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/5637.png" alt="Tool 4">
+                    <figcaption>Түрдэг хөрөө<br>79,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/6320JER.png" alt="Tool 4">
+                    <figcaption>Цахилгаан дрилл<br>79,000 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/6630ER.png" alt="Tool 4">
+                    <figcaption>Цахилгаан дрилл<br>65,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/9500.png" alt="Tool 4">
+                    <figcaption>Цахилаан зүлгүүр жижиг<br>39,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/9718EI.png" alt="Tool 4">
+                    <figcaption>Өнгөлгөөний таслагч<br>69,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/9910.png" alt="Tool 4">
+                    <figcaption>Жижиг гар таслагч<br>59,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/BA4190.png" alt="Tool 4">
+                    <figcaption>Бетон ханын зүсэгч<br>39,900 ₮</figcaption>
+                </figure>
+                <figure class="button-figure">
+                    <img src="../pictures/BL2120-40C.png" alt="Tool 4">
+                    <figcaption>Батерайт цохилттой дрилл<br>39,900 ₮</figcaption>
+                </figure>
+                
+            </article>
+        </section>
+
+        <main>
+            <section>
+                <h2>Худалдаалах буй байршил</h2>
+                <section class="locations">
+                    <article class="location-card">
+                        <img src="../pictures/location1.jpg" alt="Ikh Nayad Plaza">
+                        <section class="location-details">
+                            <h3>Ikh Nayad Plaza</h3>
+                            <p>Хаяг: Улаанбаатар хот, Сүхбаатар дүүрэг</p>
+                            <p>Салбар: TOWER-1, 2 давхар</p>
+                            <p>Ажиллах цаг: 08:00 - 21:00</p>
+                            <p>Утас: 7772-4422</p>
+                        </section>
+                    </article>
+                    <article class="location-card">
+                        <img src="../pictures/location2.jpg" alt="Uran Gan">
+                        <section class="location-details">
+                            <h3>Uran Gan</h3>
+                            <p>Хаяг: Улаанбаатар хот, Хан-Уул дүүрэг</p>
+                            <p>Салбар: VISTA хороолол</p>
+                            <p>Ажиллах цаг: 08:00 - 21:00</p>
+                            <p>Утас: 7772-4422</p>
+                        </section>
+                    </article>
+                    <article class="location-card coming-soon">
+                        <img src="../pictures/location3.jpg" alt="Coming soon">
+                        <section class="location-details">
+                            <p>COMING SOON...</p>
+                        </section>
+                    </article>
+                </section>
+            </section>
+        </main>
+               
+
+        <footer>
+            <section class="footer-logo">
+                Aank tools
+            </section>
+            <nav class="footer-nav">
+                <a href="../pages/main.html">Цахилгаан багаж</a>
+                <a href="../pages/furniture.html">Тавилгын хэрэгсэл</a>
+                <a href="../pages/construction.html">Барилгын тусгах материал</a>
+            </nav>
+            <section class="footer-contact">
+                <p>Холбоо барих</p>
+                <p>Утас: 95533564</p>
+                <p>Email: Aanktols@email.com</p>
+                <section class="social-icons">
+                    <a href="#" class="facebook">F</a>
+                    <a href="#" class="twitter">T</a>
+                    <a href="#" class="instagram">I</a>
+                </section>
+            </section>
+        </footer>
+</body>
+</html>
